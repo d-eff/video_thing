@@ -13,7 +13,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let player = Player(frame: view.frame, videoId: "uNYEZXvRlB8")
+        let player = Player(frame: view.frame, videoId: VideoList.pandasLive)
         view.addSubview(player)
         player.play()
     }

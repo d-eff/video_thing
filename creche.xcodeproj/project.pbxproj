@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E233A75C200BC948003E428D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E233A75B200BC948003E428D /* WebKit.framework */; };
+		E2423014200D3AF6008A0E51 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2423013200D3AF6008A0E51 /* VideoList.swift */; };
 		E28B7692200D31BA000B9403 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B7691200D31BA000B9403 /* PlayerView.swift */; };
 		E2B0FC0D200BB4690017A46A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0FC0C200BB4690017A46A /* AppDelegate.swift */; };
 		E2B0FC0F200BB4690017A46A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0FC0E200BB4690017A46A /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		E233A75B200BC948003E428D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E2423013200D3AF6008A0E51 /* VideoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoList.swift; sourceTree = "<group>"; };
 		E28B7691200D31BA000B9403 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		E2B0FC09200BB4690017A46A /* creche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = creche.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B0FC0C200BB4690017A46A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				E2B0FC0C200BB4690017A46A /* AppDelegate.swift */,
 				E2B0FC0E200BB4690017A46A /* ViewController.swift */,
+				E2423013200D3AF6008A0E51 /* VideoList.swift */,
 				E28B7691200D31BA000B9403 /* PlayerView.swift */,
 				E2B0FC10200BB4690017A46A /* Assets.xcassets */,
 				E2B0FC12200BB4690017A46A /* Main.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E28B7692200D31BA000B9403 /* PlayerView.swift in Sources */,
+				E2423014200D3AF6008A0E51 /* VideoList.swift in Sources */,
 				E2B0FC0F200BB4690017A46A /* ViewController.swift in Sources */,
 				E2B0FC0D200BB4690017A46A /* AppDelegate.swift in Sources */,
 			);
