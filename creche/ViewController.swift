@@ -13,8 +13,15 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.wantsLayer = true
+        
+        let areYouFuckingWithMeSwift = NSView(frame: view.frame)
+        view.addSubview(areYouFuckingWithMeSwift)
+        areYouFuckingWithMeSwift.layer?.backgroundColor = NSColor.black.cgColor
+        
         let player = Player(frame: view.frame, videoId: VideoList.pandasLive)
         view.addSubview(player)
+        
         player.play()
     }
 }

@@ -10,13 +10,29 @@ import WebKit
 
 class Player: WKWebView {
     //all props to https://stackoverflow.com/questions/34429042/autoplay-on-video-in-uiwebview-ios for the autoplay
-    let youTubeVideoHTML: String = "<!DOCTYPE html><html><head><style>body{margin:0px 0px 0px 0px;}</style></head> <body> <div id=\"player\"></div> <script> var tag = document.createElement('script'); tag.src = \"http://www.youtube.com/player_api\"; var firstScriptTag = document.getElementsByTagName('script')[0]; firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); var player; function onYouTubePlayerAPIReady() { player = new YT.Player('player', { width:'%0.0f', height:'%0.0f', videoId:'%@', events: { 'onReady': onPlayerReady, } }); } function onPlayerReady(event) { event.target.mute(); event.target.playVideo(); } </script> </body> </html>"
+    let youTubeVideoHTML: String = "<!DOCTYPE html><html><head><style>body{margin:0px 0px 0px 0px;}</style></head> <body> <div id=\"player\"></div>" +
+        "<script> var tag = document.createElement('script');" +
+        "tag.src = \"http://www.youtube.com/player_api\";" +
+        "var firstScriptTag = document.getElementsByTagName('script')[0];" +
+        "firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);" +
+        "var player;" +
+        "function onYouTubePlayerAPIReady() {" +
+        "player = new YT.Player('player', { width:'%0.0f', height:'%0.0f', videoId: '', events: { 'onReady': onPlayerReady, } });" +
+        "}" +
+        "function onPlayerReady(event) {" +
+//        "event.target.loadVideoById('wUPPkSANpyo');" +
+            "event.target.loadPlaylist({ 'listType': 'playlist', 'list': 'PLJ0JOW9C0fwCjcOwdCiycsWrckPGzdwt5', 'index': '0' });" +
+        "event.target.setShuffle({'shufflePlaylist': 'true'});" +
+            "event.target.mute();" +
+            "event.target.playVideo();" +
+        "} </script> </body> </html>"
     
     var html: String
+    let magicScalingConstant: CGFloat = 9/16
     
     init(frame: CGRect, videoId: String) {
         let config = WKWebViewConfiguration()
-        html = String(format: youTubeVideoHTML, frame.size.width, frame.size.height, videoId)
+        html = String(format: youTubeVideoHTML, frame.size.width, frame.size.width * magicScalingConstant)
         super.init(frame: frame, configuration: config)
     }
     
