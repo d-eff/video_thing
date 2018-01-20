@@ -19,7 +19,7 @@ class ViewController: NSViewController {
         view.addSubview(areYouFuckingWithMeSwift)
         areYouFuckingWithMeSwift.layer?.backgroundColor = NSColor.black.cgColor
         
-        let player = Player(frame: view.frame, videoId: VideoList.pandasLive)
+        let player = Player(frame: view.frame, video: VideoList.hipHopPlaylist)
         view.addSubview(player)
         
         player.play()

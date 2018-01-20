@@ -6,15 +6,14 @@
 //  Copyright © 2018 Fictional Corp. All rights reserved.
 //
 
-struct VideoList {
-    static let blazeBus = "jsdCrt97_eU"
-    static let jellyfishLive = "g1I3SCpOFtM"
-    static let taiwanNewsLive = "wUPPkSANpyo"
-    static let puppiesLive = "RTfKYDIhlVE"
-    static let pandasLive = "uNYEZXvRlB8"
-    static let issLive = "RtU_mdL2vBM"
-}
+typealias Video = (id: String, protocol: String, isPlaylist: Bool)
 
-struct PlayListList {
-    static let hipHopPlaylist = "PLJ0JOW9C0fwCjcOwdCiycsWrckPGzdwt5"
+struct VideoList {
+    static let blazeBus =       ("jsdCrt97_eU", "youtube", false)
+    static let jellyfishLive =  ("g1I3SCpOFtM", "youtube", false)
+    static let taiwanNewsLive = ("wUPPkSANpyo", "youtube", false)
+    static let puppiesLive =    ("RTfKYDIhlVE", "youtube", false)
+    static let pandasLive =     ("uNYEZXvRlB8", "youtube", false)
+    static let issLive =        ("RtU_mdL2vBM", "youtube", false)
+    static let hipHopPlaylist = ("PLJ0JOW9C0fwCjcOwdCiycsWrckPGzdwt5", "youtube", true)
 }
